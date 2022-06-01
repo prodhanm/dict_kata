@@ -5,10 +5,15 @@ gaming_console = {
     "Quest" : 150.00
 }
 
+increase = 1.11
 def price_update(gaming_console):
     for game, price in gaming_console.items():
-        gaming_console[game] = round(price*1.11, 2)
+        gaming_console[game] = round(price*increase, 2)
     print(gaming_console)
 
 price_update(gaming_console)
 
+for game, price in gaming_console.items():
+    print(f"The {game} with another controller is ${price}.")
+
+# print("The XBox plus another controller is ", gaming_console["XBox"])
