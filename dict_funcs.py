@@ -5,8 +5,10 @@ gaming_console = {
     "Quest" : 150.00
 }
 
-for game, price in gaming_console.items():
-    gaming_console[game] = round(price*1.11, 2)
-print(gaming_console)
+def price_update(gaming_console):
+    for game, price in gaming_console.items():
+        gaming_console[game] = round(price*1.11, 2)
+    print(gaming_console)
 
-print(gaming_console["XBox"])
+price_update(gaming_console)
+
