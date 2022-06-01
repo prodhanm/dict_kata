@@ -5,8 +5,8 @@ gaming_console = {
     "Quest" : 150.00
 }
 
-increase = 1.11
 def price_update(gaming_console):
+    increase = 1.11
     for game, price in gaming_console.items():
         gaming_console[game] = round(price*increase, 2)
     print(gaming_console)
