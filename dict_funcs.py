@@ -16,4 +16,3 @@ price_update(gaming_console)
 for game, price in gaming_console.items():
     print(f"The {game} with another controller is ${price}.")
 
-# print("The XBox plus another controller is ", gaming_console["XBox"])
