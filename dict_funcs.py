@@ -1,3 +1,6 @@
+from re import X
+import sys
+
 gaming_console = {
     "XBox" : 499.00,
     "Playstation 5" : 450.00,
@@ -6,10 +9,13 @@ gaming_console = {
 }
 
 def price_update(gaming_console):
-    increase = 1.11
-    for game, price in gaming_console.items():
-        gaming_console[game] = round(price*increase, 2)
-    print(gaming_console)
+    try:
+        increase = 1.11
+        for game, price in gaming_console.items():
+            gaming_console[game] = round(price*increase, 2)
+        print(gaming_console)
+    except Exception:
+        print(f"The {sys.exc_info()[0]} exception occured.")
 
 price_update(gaming_console)
 
