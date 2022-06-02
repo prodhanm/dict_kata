@@ -1,6 +1,8 @@
 from re import X
 import sys
 
+from pexpect import ExceptionPexpect
+
 gaming_console = {
     "XBox" : 499.00,
     "Playstation 5" : 450.00,
@@ -19,6 +21,9 @@ def price_update(gaming_console):
 
 price_update(gaming_console)
 
-for game, price in gaming_console.items():
-    print(f"The {game} with another controller is ${price}.")
+try:
+    for game, price in gaming_console.items():
+        print(f"The {game} with another controller is ${price}.")
+except Exception:
+    print("The variable must be inserted in this statement.")
 
