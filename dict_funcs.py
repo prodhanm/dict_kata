@@ -1,7 +1,4 @@
-from re import X
 import sys
-
-from pexpect import ExceptionPexpect
 
 gaming_console = {
     "XBox" : 499.00,
